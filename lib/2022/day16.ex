@@ -56,7 +56,7 @@ defmodule Aoc2022.Day16 do
   defp build_distance_map(valve_map) do
     has_flows =
       valve_map
-      |> Map.filter(fn {k, v} -> v.rate > 0 end)
+      |> Map.filter(fn {_k, v} -> v.rate > 0 end)
       |> Map.keys()
       |> Kernel.++(["AA"])
 
@@ -88,19 +88,19 @@ defmodule Aoc2022.Day16 do
         |> Map.put(:score, (min_last - distance_map[current][k]) * v.rate)
       end)
       |> Map.filter(fn {_k, v} -> v.score > 0 end)
-      |> Enum.sort_by(fn {k, v} -> v.score end, :desc)
+      |> Enum.sort_by(fn {_k, v} -> v.score end, :desc)
 
     if candidates == [] do
       total_flow
       |> IO.inspect(label: "opened")
     else
       candidates
-      |> Enum.filter(fn {k, v} ->
+      |> Enum.filter(fn {_k, v} ->
         v.score >= elem(hd(candidates), 1).score / 3
       end)
       |> tap(fn cand ->
         opened
-        |> Enum.sort_by(fn {k, v} -> v end, :desc)
+        |> Enum.sort_by(fn {_k, v} -> v end, :desc)
         |> IO.inspect(label: "opened")
 
         cand
@@ -143,19 +143,19 @@ defmodule Aoc2022.Day16 do
         |> Map.put(:score, (min_last - distance_map[current][k]) * v.rate)
       end)
       |> Map.filter(fn {_k, v} -> v.score > 0 end)
-      |> Enum.sort_by(fn {k, v} -> v.score end, :desc)
+      |> Enum.sort_by(fn {_k, v} -> v.score end, :desc)
 
     if candidates == [] do
       total_flow
       |> IO.inspect(label: "opened")
     else
       candidates
-      |> Enum.filter(fn {k, v} ->
+      |> Enum.filter(fn {_k, v} ->
         v.score >= elem(hd(candidates), 1).score / 2
       end)
       |> tap(fn cand ->
         opened
-        |> Enum.sort_by(fn {k, v} -> v end, :desc)
+        |> Enum.sort_by(fn {_k, v} -> v end, :desc)
         |> IO.inspect(label: "opened")
 
         cand
