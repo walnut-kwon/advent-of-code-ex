@@ -1,3 +1,6 @@
+# Advent of Code 2023 Day 5 - If You Give A Seed A Fertilizer
+# https://adventofcode.com/2023/day/5
+
 defmodule Aoc2023.Day5 do
   @dir "input/2023/"
 

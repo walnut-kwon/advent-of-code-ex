@@ -1,3 +1,6 @@
+# Advent of Code 2023 Day 3 - Gear Ratios
+# https://adventofcode.com/2023/day/3
+
 defmodule Aoc2023.Day3 do
   @dir "input/2023/"
 

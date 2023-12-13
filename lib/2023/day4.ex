@@ -1,3 +1,6 @@
+# Advent of Code 2023 Day 4 - Scratchcards
+# https://adventofcode.com/2023/day/4
+
 defmodule Aoc2023.Day4 do
   @dir "input/2023/"
 

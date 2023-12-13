@@ -1,3 +1,6 @@
+# Advent of Code 2023 Day 6 - Wait For It
+# https://adventofcode.com/2023/day/6
+
 defmodule Aoc2023.Day6 do
   @dir "input/2023/"
 

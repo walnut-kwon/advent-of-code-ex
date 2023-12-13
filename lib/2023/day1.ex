@@ -1,3 +1,6 @@
+# Advent of Code 2023 Day 1 - Trebuchet?!
+# https://adventofcode.com/2023/day/1
+
 defmodule Aoc2023.Day1 do
   @dir "input/2023/"
 
